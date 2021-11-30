@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+  background-color: #000;
+  color: #ffe81f;
+}
+
+.person {
+  font-weight: bold;
+}
+
+.hair {
+  font-style: italic;
+}
+
+.title {
+  font-size: 0.8rem;
+}
