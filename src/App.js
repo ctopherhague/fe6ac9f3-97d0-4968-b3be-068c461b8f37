@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Person from './components/person';
 
 const swapi = async function(url){
   const response = await fetch(url)
@@ -21,10 +22,13 @@ class App extends React.Component {
   }
   
   render() {
+	const list_items = this.state.people.map((p) => <li><Person attributes={p} /></li>)
     return (
       <React.Fragment>
         <h1 className="header">Star Wars People</h1>
-        <pre>{JSON.stringify(this.state.people, null, 2)}</pre>
+        <pre>
+			<ul>{list_items}</ul>
+		</pre>
       </React.Fragment>
     );
   }
