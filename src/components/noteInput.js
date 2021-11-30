@@ -1,8 +1,9 @@
 import React from "react";
 
+// TODO keyboard locale mismatch possibility
 const RETURN_KEY_CODE = 13;
 
-class NoteInput extends React.Component {
+export default class NoteInput extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { input: "" };
@@ -35,10 +36,10 @@ class NoteInput extends React.Component {
 		<div className="notes_input">
 			<input
 				autoFocus
-				onChange={this.updateInput}
-				onSubmit={this.handleSubmitNote}
-				onKeyDown={this.handleKeyDown}
-				value={this.state.input}
+				onChange={ this.updateInput }
+				onSubmit={ this.handleSubmitNote }
+				onKeyDown={ this.handleKeyDown }
+				value={ this.state.input }
 			/>
 			<button
 				className="add-note-button"
@@ -49,5 +50,3 @@ class NoteInput extends React.Component {
 		)
 	}
 };
-
-export default NoteInput;
